@@ -6,8 +6,8 @@ const reducer = ( state = 0, action ) => {
     case 'INC':
       return state =1;
 
-      default:
-       return state;
+    default:
+     return state;
   }
 
 };
@@ -15,11 +15,9 @@ const reducer = ( state = 0, action ) => {
 let state = reducer(undefined, {});
 
 state = reducer( state, { type: 'INC'} );
-
 console.log('State - ', state);
 
 state = reducer( state, { type: 'INC'} );
-
 console.log('State - ', state);
 
 // N 104-106
