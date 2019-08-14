@@ -1,26 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const initialState = 0;
 
-export default App;
+const reducer = ( state = 0, action ) => {
+
+  switch (action.type) {
+
+    case 'INC':
+      return state =1;
+
+      default:
+       return state;
+  }
+
+};
+
+let state = reducer( initialState, { type: 'INC'} );
+
+console.log('State - ', state);
+
+// N 104-105
