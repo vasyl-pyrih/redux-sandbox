@@ -1,6 +1,4 @@
 
-const initialState = 0;
-
 const reducer = ( state = 0, action ) => {
 
   switch (action.type) {
@@ -14,8 +12,14 @@ const reducer = ( state = 0, action ) => {
 
 };
 
-let state = reducer( initialState, { type: 'INC'} );
+let state = reducer(undefined, {});
+
+state = reducer( state, { type: 'INC'} );
 
 console.log('State - ', state);
 
-// N 104-105
+state = reducer( state, { type: 'INC'} );
+
+console.log('State - ', state);
+
+// N 104-106
